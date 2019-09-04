@@ -1,4 +1,4 @@
-=== Very Simple WP SlideShow Bars ===
+=== Very Simple WP SlideShow ===
 Contributors: jchaves
 Version:	1.0
 Tags: slideshow, bars
