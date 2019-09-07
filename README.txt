@@ -1,7 +1,7 @@
 === Very Simple WP SlideShow ===
 Contributors: jchaves
-Version:	1.0
-Tags: slideshow, bars
+Version:	1.1
+Tags: slideshow
 Stable tag: trunk
 Requires at least: 4.4
 Tested up to: 5.2
