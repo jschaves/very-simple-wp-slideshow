@@ -48,9 +48,7 @@ class VSWPSS_Content_Messenger {
 				$filter[$a] = $ouputs[0][$a][0];
 				$values[$a] = esc_attr( $this->deserializer_vswpss->get_filter( 'very_simple_wp_slideshow_' . $explodeId[0] ) );
 			}
-
 			for( $a = 0; $a < count( $values ); $a++ ) {
-
 				if( !empty( $values[$a] ) ) { 
 					$styleSlideShow = explode( ',', $values[$a] );
 					$id = explode( '=', $styleSlideShow[0] );
@@ -60,7 +58,7 @@ class VSWPSS_Content_Messenger {
 					$images = explode( '=', $styleSlideShow[4] );
 					$color = explode( '=', $styleSlideShow[5] );
 					$background = explode( '=', $styleSlideShow[6] );
-					$text = explode( '=', $styleSlideShow[7] );
+					$text = explode( 'text=', $styleSlideShow[7] );
 					$text_array = explode('vswpss', $text[1]);
 					$color_array = explode('vswpss', $color[1]);
 					$images_array = explode('vswpss', $images[1]);
@@ -71,8 +69,8 @@ class VSWPSS_Content_Messenger {
 					$vswpss_total = count($images_array);
 					for( $b = 0; $b < $vswpss_total; $b++ ) {
 						$html[$a] .= '		<span class="vswpss-slides-' . $a . ' vswpss-fade" style="width:100%; height:' . $height[1] . 'px;">';
-						$html[$a] .= '			<img title="' . $text_array[$b] . '" alt="' . $text_array[$b] . '" class="vswpss-img" src="' . $images_array[$b] . '" style="width:100%; height:' . $height[1] . 'px;" />';
-						$html[$a] .= '			<span class="vswpss-text" style="display: flow-root;width:100%;color:' . $color_array[$b] . ';background-color:' . $background_array[$b] . ';opacity: 0.7;">' . $text_array[$b] . '</span>';
+						$html[$a] .= '			<img title="' . strip_tags( $text_array[$b] ) . '" alt="' . strip_tags( $text_array[$b] ) . '" class="vswpss-img" src="' . $images_array[$b] . '" style="width:100%; height:' . $height[1] . 'px;" />';
+						$html[$a] .= '			<span class="vswpss-text" style="display: flow-root;width:100%;color:' . $color_array[$b] . ';background-color:' . $background_array[$b] . ';opacity: 0.7;">' . htmlspecialchars_decode( $text_array[$b] ) . '</span>';
 						$html[$a] .= '         	<span class="vswpss-numbertext" style="color:' . $color_array[$b] . ';background-color:' . $background_array[$b] . ';opacity: 0.7;">' . $vswpss_count . ' / ' . $vswpss_total . '</span>';
 						$html[$a] .= '		</span>';
 						$vswpss_count++;
