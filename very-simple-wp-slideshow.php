@@ -57,6 +57,20 @@ function vswpss_add_languages() {
 	load_plugin_textdomain( 'very-simple-wp-slideshow', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
 add_action( 'plugins_loaded', 'vswpss_add_languages' );
+//add tag <a>
+function vswpss_custom_wpkses_post_tags( $tags, $context ) {
+	if ( 'post' === $context ) {
+		$tags['a'] = array(
+			'href'             => true,
+			'height'          => true,
+			'width'           => true,
+			'title'     => true,
+			'alt' => true,
+		);
+	}
+	return $tags;
+}
+add_filter( 'wp_kses_allowed_html', 'vswpss_custom_wpkses_post_tags', 10, 2 );
 /**
  * Starts the plugin.
  *

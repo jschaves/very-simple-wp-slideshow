@@ -49,7 +49,7 @@ class VSWPSS_Serializer {
 					"images=" . str_replace( ',', 'vswpss', sanitize_text_field( $_POST['vswpss-data-save-img'] ) ) . "," .
 					"color=" . str_replace( ',', 'vswpss', sanitize_text_field( $_POST['vswpss-data-save-color-text'] ) ) . "," .
 					"background=" . str_replace( ',', 'vswpss', sanitize_text_field( $_POST['vswpss-data-save-background-color-text'] ) ) . "," .
-					"text=" . str_replace( ',', 'vswpss', sanitize_text_field( $_POST['vswpss-data-save-text'] ) );
+					"text=" . str_replace( ',', 'vswpss', wp_kses_post( $_POST['vswpss-data-save-text'] ) );
 				update_option( 'very_simple_wp_slideshow_' . $id, $value );
 			}
         }

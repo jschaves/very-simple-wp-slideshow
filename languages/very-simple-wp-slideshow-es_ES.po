@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2019-07-16 10:44+0530\n"
-"PO-Revision-Date: 2019-09-04 15:40+0200\n"
+"PO-Revision-Date: 2019-09-14 17:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -47,10 +47,10 @@ msgstr "Colores de los textos"
 msgid "Background color of the text"
 msgstr "Color de fondo de los textos"
 
-#: /admin/views/vswpp-settings.php:64
-msgid "Slide text, support html"
-msgstr "Texto de las diapositivas, admite html"
+#: /admin/views/vswpp-settings.php:64 /admin/views/vswpp-settings.php:88
+msgid "Slide text support tag <a>"
+msgstr "Texto de las diapositivas, admite etiqueta <a>"
 
-#: /admin/views/vswpp-settings.php:87
+#: /admin/views/vswpp-settings.php:88
 msgid "Click Copy for the selected SlideShow and paste it in the page where you want it to appear."
 msgstr "Haga clic en Copiar para la presentación de diapositivas seleccionada y péguela en la página donde desea que aparezca."

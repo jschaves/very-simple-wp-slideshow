@@ -61,7 +61,7 @@ if ( ! defined( 'WPINC' ) ) {
 					<span id="vswpss-add-background-color-text"></span>
 				</p>
 				<p>
-					<label><?php esc_html_e( 'Slide text, support html', 'very-simple-wp-slideshow'  ); ?></label>
+					<label><?php esc_html_e( 'Slide text support tag <a>', 'very-simple-wp-slideshow'  ); ?></label>
 					<span id="vswpss-add-text"></span>
 				</p>
 				<input id="vswpss-data-save-img" type="hidden" name="vswpss-data-save-img" required />
@@ -79,11 +79,12 @@ if ( ! defined( 'WPINC' ) ) {
 		<input type="button" id="vswpss-reset" class="button button-primary vswpss-view-input" value="Reset" />
     </form>
 </div>
+<br />
 <p><a id="vswpss-link-data-slideshow" class="vswpss-preview-slideshow" ><?php esc_html_e( 'Preview' ); ?></a></p>
 <p><span id="vswpss-paint" style="display:none" ></span><span id="vswpss-dot" style="text-align:center"></span></p>
 <br />
 <br />
-<h3><?php esc_html_e( 'Slide text support html', 'very-simple-wp-slideshow' ); ?></h3>
+<h3><?php esc_html_e( 'Slide text support tag <a>', 'very-simple-wp-slideshow' ); ?></h3>
 <p><?php esc_html_e( 'Click Copy for the selected SlideShow and paste it in the page where you want it to appear.', 'very-simple-wp-slideshow' ); ?></p>
 <br />
 <div id="vswpss-list-slideshow">

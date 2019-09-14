@@ -62,7 +62,7 @@ var vswpssSavedBackground;
 				jQuery('#vswpss-add-img').append('<p>' + vswpssCountNew + ' <input class="vswpss-add-img-new" type="text" required /></p>');
 				jQuery('#vswpss-add-color-text').append('<p>' + vswpssCountNew + ' <input class="vswpss-add-color-text-new" type="color" value="' + id['vswpssDataColorText'][vswpssCount] + '" required /></p>');
 				jQuery('#vswpss-add-background-color-text').append('<p>' + vswpssCountNew + ' <input class="vswpss-add-background-color-text-new" type="color" value="' + id['vswpssDataBackgroundColorText'][vswpssCount] + '" required /></p>');
-				jQuery('#vswpss-add-text').append('<p>' + vswpssCountNew + ' <input class="vswpss-add-text-new" type="text" value="' + id['vswpssDataText'][vswpssCount] + '" required /></p>');
+				jQuery('#vswpss-add-text').append('<p>' + vswpssCountNew + ' <input class="vswpss-add-text-new" type="text" value=\'' + id['vswpssDataText'][vswpssCount] + '\' required /></p>');
 				vswpssCountNew++;
 			}
 		}
@@ -258,7 +258,7 @@ var vswpssSavedBackground;
 				jQuery('#vswpss-add-img').append('<p>' + vswpssCountNew + ' <input class="vswpss-add-img-new" value="' + vswpssSavedImg[vswpssCount] + '" type="text" required /></p>');
 				jQuery('#vswpss-add-color-text').append('<p>' + vswpssCountNew + ' <input class="vswpss-add-color-text-new" type="color" value="' + vswpssSavedcolorText[vswpssCount] + '" required /></p>');
 				jQuery('#vswpss-add-background-color-text').append('<p>' + vswpssCountNew + ' <input class="vswpss-add-background-color-text-new" type="color" value="' + vswpssSavedBackground[vswpssCount] + '" required /></p>');
-				jQuery('#vswpss-add-text').append('<p>' + vswpssCountNew + ' <input class="vswpss-add-text-new" type="text" value="' + vswpssSavedText[vswpssCount] + '" required /></p>');
+				jQuery('#vswpss-add-text').append('<p>' + vswpssCountNew + ' <input class="vswpss-add-text-new" type="text" value=\'' + vswpssSavedText[vswpssCount] + '\' required /></p>');
 				vswpssCountNew++;				
 			}
 			jQuery('.vswpss-help-slideshow').fadeIn('slow');
